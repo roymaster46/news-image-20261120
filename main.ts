@@ -28,12 +28,15 @@
 // 21341f8317493a2b9f64e0dd2ab4c03cd9285f3fff4599ecfb678637e2c328c1,
 // identical to the stored entry.png. Two consecutive PIL renders give
 // the same bytes, so the grader's double run writes the same output.
-// Kit check (fresh kit downloaded 20 Nov ~10:00 WIB): 4 pass
-// (competition_open, snapshot, license_osi, entrypoint); the only fail
-// is transcripts_present, because no transcript bundle was supplied -
-// the coordinator bundles transcripts at submit time, as for v3/v4.
-// All transcript-gate checks skip without a bundle; the 5 repo/commit
-// rows are decided by the site at submit (same repo flow v3 used).
+// Kit check (fresh kit downloaded 20 Nov ~10:00 WIB): 3 pass
+// (competition_open, snapshot, entrypoint); license_osi FAILED on the
+// first run (LICENSE lacked the SPDX line) - fixed by adding
+// "SPDX-License-Identifier: MIT" to the root LICENSE and recommitting;
+// transcripts_present fails only because no transcript bundle was
+// supplied yet - the coordinator bundles transcripts at submit time,
+// as for v3/v4. All transcript-gate checks skip without a bundle; the
+// 5 repo/commit rows are decided by the site at submit (same repo flow
+// v3 used).
 // 39 stories (3 heroes + 9 mids + 27 briefs), 6 regions, 1024x1024.
 //
 // Run locally with:
